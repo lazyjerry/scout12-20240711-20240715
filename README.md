@@ -6,7 +6,7 @@
 2. 後台定時拉取 Cloudflare 簽到簽出資料。
 3. 工作坊於後台和 KV 上互相同步，作為工作人員登入使用。
 
-![系統結構概述](https://raw.githubusercontent.com/lazyjerry/scout12/main/%E6%96%87%E4%BB%B6/%E7%B3%BB%E7%B5%B1%E7%B5%90%E6%A7%8B%E6%A6%82%E8%BF%B0.png?token=GHSAT0AAAAAACU5KDRYPFBKPQXNIJ6OXN2UZUWO4OQ "系統結構概述")
+![系統結構概述](https://raw.githubusercontent.com/lazyjerry/scout12/main/%E6%96%87%E4%BB%B6/%E7%B3%BB%E7%B5%B1%E7%B5%90%E6%A7%8B%E6%A6%82%E8%BF%B0.png "系統結構概述")
 
 
 ## 一、前端
@@ -63,7 +63,7 @@
     3. 創建工作坊、簽到簽退紀錄、學員 demo 資料。
     4. 刪除/同步工作坊、簽到紀錄、學員資料。
 
-![用例](https://raw.githubusercontent.com/lazyjerry/scout12/main/%E6%96%87%E4%BB%B6/%E7%94%A8%E4%BE%8B%E5%9C%96.png?token=GHSAT0AAAAAACU5KDRYA3QAAF64OMHH4LMOZUWO6AQ "用例")
+![用例圖](https://raw.githubusercontent.com/lazyjerry/scout12/main/%E6%96%87%E4%BB%B6/%E7%94%A8%E4%BE%8B%E5%9C%96.png "用例圖")
 
 # 優化清單
 
@@ -195,11 +195,11 @@
     1. 記得需排除 cros domain 問題。
 4. 更新資料庫 localhost.sql 資料庫。
 5. 請記得自行更換密碼。驗證密碼位置於：
-    1. scout2024-backend/www/app/Controllers/Auth.php:72
+    1. 後台原始碼/backend/www/app/Controllers/Auth.php:72
 6. 更新 .env 檔案
     1. 複製 .env.sample
     2. 更改 顯示 XXX 的訊息以及數字。
-        1. DEV_AUTH_KEY 為前端開發用密鑰，參考位置：scout2024-backend/www/app/Filters/AuthFilter.php:40
+        1. DEV_AUTH_KEY 為前端開發用密鑰，參考位置：後台原始碼/backend/www/app/Filters/AuthFilter.php:40
         2. JWT_SECRET 為登入密鑰、也用於 Cloudfalre API 驗證密鑰。
         3. CLOUDFLARE_API_URL 為 cloudfalre endpoint.
         4. WEATER_KEY 為天氣 API 密鑰。
@@ -222,3 +222,11 @@
     4. VITE_IS_DEMO 保持 false 如有修改需要可應用。
 5. 於本地開發完之後，執行 npm run build 建立 dist 資料夾。
 6. git 更新，稍等幾分鐘開啟 pages 設定網址即可。
+
+--
+
+### 最後
+Hi, this is Jerry.
+這個系統做得有點坎坷，需求和規劃並非一帆風順，而童軍運動也不是有給付薪水的工作（笑），針對吃程式設計這行飯的前後端人手似乎不太好找。這次的實作算是花費了 2024 上半年的很多時間，從一開始需求不清晰到開始找大流量的結構、研究比較服務、前端到後端實作在到配套規劃，中間也是吵吵鬧鬧的，所幸算是還拿的出來一個堪用的東西。未來如果童軍伙伴有需要使用，可以參考部署流程架設，或是想要自己實作的話，也可以抽換裡面的結構來做。 
+
+就希望這個作品當作一個拋磚引玉的作用吧。希望玩童軍的程式設計師都能有錢、有餘裕再回頭貢獻。
