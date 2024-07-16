@@ -1,0 +1,871 @@
+_type: export
+__export_format: 4
+__export_date: 2024-07-16T11:30:53.223Z
+__export_source: insomnia.desktop.app:v9.3.2
+resources:
+  - _id: req_cd3529c9720145169b2257fa48a5c3a5
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1711512950868
+    created: 1711505284419
+    url: http://localhost:57922
+    name: workers
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: '{"token":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx","key":"admin","data":{"type":"register","name":"測試001","username":"10000","sessions":"071101,071102,071103,071104,071203,071403,071404,071501,071502,071503,071504"},"action":"sync-put","ip":"172.105.221.227"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1711505284419
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    parentId: null
+    modified: 1709994701874
+    created: 1709994701874
+    name: 全12
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_d2e4a08ff58b4b2590daf64f1ee9cf1e
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1721060526800
+    created: 1709995688322
+    url: https://scout12-backend.xxx.xxx/admin/getAllPermissions
+    name: getAllPermissions
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.6.1
+        id: pair_a655b9c54ac3406b976d61b7531fa7f9
+      - id: pair_df1c60c37c1c4aee9383c62fc7f0a74a
+        name: Auth
+        value: 69c82b382bdc249d0509a231f001212a
+        description: ""
+    authentication: {}
+    metaSortKey: -1709995688322
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_467069e25ebc44ea86c05603ca6fc532
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1717381345253
+    created: 1711198039485
+    url: https://scout12-backend.xxx.xxx/admin/getStatus
+    name: getStatus
+    description: ""
+    method: POST
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.6.1
+        id: pair_a655b9c54ac3406b976d61b7531fa7f9
+      - id: pair_df1c60c37c1c4aee9383c62fc7f0a74a
+        name: Auth
+        value: 69c82b382bdc249d0509a231f001212a
+        description: ""
+    authentication: {}
+    preRequestScript: ""
+    metaSortKey: -1709995199813.5
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_a21234e788af499d9e1041d7b12a7aab
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1720667459819
+    created: 1711206765136
+    url: https://scout12-backend.xxx.xxxadmin/members
+    name: members
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: '{"isAbove":true,"onlyNonJoin":false,"workshopUsername":"120807","sessionCount":1,"memberArea":"","scoutName":"","scoutNum":"","memberNum":"","memberName":"","action":"list"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.6.1
+        id: pair_a655b9c54ac3406b976d61b7531fa7f9
+      - id: pair_df1c60c37c1c4aee9383c62fc7f0a74a
+        name: Auth
+        value: 69c82b382bdc249d0509a231f001212a
+        description: ""
+    authentication: {}
+    metaSortKey: -1709994955559.25
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_dcf3e0cb983f41abbff74095f50f7149
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1711814210608
+    created: 1711810250380
+    url: https://scout12-backend.xxx.xxxadmin/members
+    name: members list
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: '{"workshopUsername":"","workshopName":"","sessionCount":"-1","memberArea":"","scoutName":"","scoutNum":"","memberNum":"","memberName":"","action":"list"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.6.1
+        id: pair_a655b9c54ac3406b976d61b7531fa7f9
+      - id: pair_df1c60c37c1c4aee9383c62fc7f0a74a
+        name: Auth
+        value: 69c82b382bdc249d0509a231f001212a
+        description: ""
+    authentication: {}
+    metaSortKey: -1709994894495.6875
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ece616d636c248a58b400cfa3da8cfda
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1711820734905
+    created: 1711820733638
+    url: https://scout12-backend.xxx.xxxadmin/members
+    name: members edit
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: '{"action":"edit","id":"4","memberNum":"111114","memberName":"林小書04","memberArea":"分營區
+        004","scoutName":"團名 001","scoutNum":"桃園縣 404
+        團","memberPhone":"0912123321","memberContactName":"林大書","memberContactPhone":"911123321","name":"修改"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.6.1
+        id: pair_a655b9c54ac3406b976d61b7531fa7f9
+      - id: pair_df1c60c37c1c4aee9383c62fc7f0a74a
+        name: Auth
+        value: 69c82b382bdc249d0509a231f001212a
+        description: ""
+    authentication: {}
+    metaSortKey: -1709994863963.9062
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4694bc48085341b3bc8d6064523f893e
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1711210204392
+    created: 1711210184680
+    url: https://scout12-backend.xxx.xxxadmin/records
+    name: records
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: '{"workshopSession":"","workshopName":"","workshopUsername":"","memberNum":"","memberName":"","memberContactName":"","memberArea":"","scoutName":"","scoutNum":"","startTime":"2024-03-24T00:00:00","endTime":"2024-03-24T23:59:59","isSignIn":true,"isSignOut":true,"action":"list"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.6.1
+        id: pair_a655b9c54ac3406b976d61b7531fa7f9
+      - id: pair_df1c60c37c1c4aee9383c62fc7f0a74a
+        name: Auth
+        value: 69c82b382bdc249d0509a231f001212a
+        description: ""
+    authentication: {}
+    metaSortKey: -1709994833432.125
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_55874b405a5947b681d5504ec6a83881
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1712336030093
+    created: 1712335863364
+    url: https://scout12-backend.xxx.xxxadmin/records
+    name: records sync
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: '{"session":"071101","workshop":"10001","action":"sync"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.6.1
+        id: pair_a655b9c54ac3406b976d61b7531fa7f9
+      - id: pair_df1c60c37c1c4aee9383c62fc7f0a74a
+        name: Auth
+        value: 69c82b382bdc249d0509a231f001212a
+        description: ""
+    authentication: {}
+    metaSortKey: -1709994802900.3438
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ebe2a86b3ad24ce29bf54c300ed01a56
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1721120194360
+    created: 1711377559231
+    url: https://scout12-backend.xxx.xxx/admin/workshops
+    name: workshops
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: '{"workshopSessions":"","workshopName":"","workshopUsername":"","action":"list"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_8330bc12e5284c7eb48bb32b68f53b0f
+      - name: User-Agent
+        value: insomnia/8.6.1
+        id: pair_a655b9c54ac3406b976d61b7531fa7f9
+      - id: pair_df1c60c37c1c4aee9383c62fc7f0a74a
+        name: Auth
+        value: 69c82b382bdc249d0509a231f001212a
+        description: ""
+    authentication: {}
+    metaSortKey: -1709994772368.5625
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_70524638404345268935327443cb3414
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1712333590445
+    created: 1712304339211
+    url: https://scout12-backend.xxx.xxxadmin/workshops
+    name: workshops upload
+    description: ""
+    method: POST
+    body:
+      mimeType: multipart/form-data
+      params:
+        - name: action
+          value: uploadData
+          id: pair_2a0523660a88425a8fd86fbe3f92beec
+        - id: pair_6fb6fa25ad194f99823627aa77d795aa
+          name: file
+          value: ""
+          description: ""
+          type: file
+          fileName: /root/Downloads/workshops_2024-04-06-001203.csv
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: multipart/form-data
+        id: pair_13ce073bddd8447ba8c1d6e3806d8501
+      - name: User-Agent
+        value: insomnia/8.6.1
+        id: pair_a655b9c54ac3406b976d61b7531fa7f9
+      - id: pair_df1c60c37c1c4aee9383c62fc7f0a74a
+        name: Auth
+        value: 69c82b382bdc249d0509a231f001212a
+        description: ""
+    authentication: {}
+    metaSortKey: -1709994757102.6719
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_888365fafa1b408e81d8119192bac2a9
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1711521775024
+    created: 1711386509718
+    url: https://scout12-backend.xxx.xxxadmin/workshops
+    name: workshops update
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: '{"action":"edit","id":"2","workshopUsername":"10002","workshopName":"人造人
+        002
+        工作坊","password":"1qaz@WSX","workshopSessions":"071101,071102,071103,071104,071201,071203,071401,071501","undefined":"071504","name":"編輯"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.6.1
+        id: pair_a655b9c54ac3406b976d61b7531fa7f9
+      - id: pair_df1c60c37c1c4aee9383c62fc7f0a74a
+        name: Auth
+        value: 69c82b382bdc249d0509a231f001212a
+        description: ""
+    authentication: {}
+    metaSortKey: -1709994741836.7812
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1df0937bc07446358e98d1c1aec06830
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1711182447426
+    created: 1709994711305
+    url: https://scout12-backend.xxx.xxxauth/login
+    name: login
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username": "admin",
+        	"password": "1qaz@WSX"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1709994711305
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_defaf4e1b58e405aac3c972802635879
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1715879184906
+    created: 1712072281081
+    url: https://scout12-backend.xxx.xxxapi/syncSignData
+    name: api  syncSignData
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"workshop": "100000",
+        	"session": "071102"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    preRequestScript: ""
+    metaSortKey: -1707211994765.5
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_812c402a8a42450495d309f093f5f4c2
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1720660560595
+    created: 1713945203353
+    url: https://scout12-backend.xxx.xxx/api/getConfig
+    name: api  config
+    description: 取得設定，於一開始頁面啟動時呼叫
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"time": ""
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_4547e2f4f5644f7d9ffdaf45ef3dd8a4
+      - name: User-Agent
+        value: insomnia/8.6.1
+        id: pair_060b4a340817442786b76e966a9cb075
+    authentication: {}
+    preRequestScript: ""
+    metaSortKey: -1706516315630.625
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6bc3e799e2ec43a8a7b899e6e6bab886
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1714030656134
+    created: 1714030625574
+    url: https://scout12-backend.xxx.xxxapi/demoCreateWorkshopAccount
+    name: api  demoCreateWorkshopAccount
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_4547e2f4f5644f7d9ffdaf45ef3dd8a4
+      - name: User-Agent
+        value: insomnia/8.6.1
+        id: pair_060b4a340817442786b76e966a9cb075
+      - id: pair_1b3847b01b8e4abbb5e6188fc5ad6b0a
+        name: Auth
+        value: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        description: ""
+    authentication: {}
+    preRequestScript: ""
+    metaSortKey: -1706472835684.6953
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_8cc907088ea44522805fedbac138370f
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1720576879831
+    created: 1714143748945
+    url: https://scout12-backend.xxx.xxx/api/deleData
+    name: api  deleData
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"workshop":0,
+        	"signlog":1,
+        	"member":0
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_4547e2f4f5644f7d9ffdaf45ef3dd8a4
+      - name: User-Agent
+        value: insomnia/8.6.1
+        id: pair_060b4a340817442786b76e966a9cb075
+      - id: pair_1b3847b01b8e4abbb5e6188fc5ad6b0a
+        name: Auth
+        value: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        description: ""
+    authentication: {}
+    preRequestScript: ""
+    metaSortKey: -1706467400691.454
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6cd920e5192a4623900d2441dcff4f5a
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1719454497903
+    created: 1714147525087
+    url: https://scout12-backend.xxx.xxx/api/prepareProductionWorkshops
+    name: api  prepareProductionWorkshops
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_4547e2f4f5644f7d9ffdaf45ef3dd8a4
+      - name: User-Agent
+        value: insomnia/8.6.1
+        id: pair_060b4a340817442786b76e966a9cb075
+      - id: pair_1b3847b01b8e4abbb5e6188fc5ad6b0a
+        name: Auth
+        value: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        description: ""
+    authentication: {}
+    preRequestScript: ""
+    metaSortKey: -1706464683194.8335
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1d454413956646d09394482c78b0a59d
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1720406211702
+    created: 1720406180806
+    url: https://scout12-backend.xxx.xxxapi/prepareProductionMembers
+    name: api  prepareProductionMembers
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_4547e2f4f5644f7d9ffdaf45ef3dd8a4
+      - name: User-Agent
+        value: insomnia/8.6.1
+        id: pair_060b4a340817442786b76e966a9cb075
+      - id: pair_1b3847b01b8e4abbb5e6188fc5ad6b0a
+        name: Auth
+        value: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        description: ""
+    authentication: {}
+    preRequestScript: ""
+    metaSortKey: -1706463324446.5232
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_00d28cc6a3ee443cbacd3ab08b0f5081
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1714034973146
+    created: 1714034971504
+    url: https://scout12-backend.xxx.xxxapi/demoCreateSignLog
+    name: api  demoCreateSignLog
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_4547e2f4f5644f7d9ffdaf45ef3dd8a4
+      - name: User-Agent
+        value: insomnia/8.6.1
+        id: pair_060b4a340817442786b76e966a9cb075
+      - id: pair_1b3847b01b8e4abbb5e6188fc5ad6b0a
+        name: Auth
+        value: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        description: ""
+    authentication: {}
+    preRequestScript: ""
+    metaSortKey: -1706461965698.213
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f7e89b15803b4761b8c4e855b40c94f9
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1714034007253
+    created: 1714034005078
+    url: https://scout12-backend.xxx.xxxapi/demoCreateMemberAccount
+    name: api  demoCreateMemberAccount
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_4547e2f4f5644f7d9ffdaf45ef3dd8a4
+      - name: User-Agent
+        value: insomnia/8.6.1
+        id: pair_060b4a340817442786b76e966a9cb075
+      - id: pair_1b3847b01b8e4abbb5e6188fc5ad6b0a
+        name: Auth
+        value: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        description: ""
+    authentication: {}
+    preRequestScript: ""
+    metaSortKey: -1706451095711.7305
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7be033ab293240c9977525c0ea313206
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1720416715300
+    created: 1713957387993
+    url: https://scout12-backend.xxx.xxx/api/getWorkShops
+    name: api  getWorkShops
+    description: 取得工作坊的簽到數量、當前最近的場次
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"time": "2024-07-11 15:32:00"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_f066fbd2f81c4db99ea01851c89ef245
+      - name: User-Agent
+        value: insomnia/8.6.1
+        id: pair_37054272b73b46ae8f25bb958cef52c0
+    authentication: {}
+    preRequestScript: ""
+    metaSortKey: -1706429355738.7656
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d567db28062f436e8834e6cd8cd3fe0b
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1717382142568
+    created: 1713953595754
+    url: https://scout12-backend.xxx.xxx/api/getWeater
+    name: api  weater
+    description: 取得最近天氣氣溫等
+    method: POST
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_ffc9afcddc834c1caed7d50345323bed
+      - name: User-Agent
+        value: insomnia/8.6.1
+        id: pair_06d5c3b1ae1e4e2f9b714d659538c58e
+    authentication: {}
+    preRequestScript: ""
+    metaSortKey: -1706342395846.9062
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_8538c6c4188544c896180bcb59788679
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1717386911327
+    created: 1713953197233
+    url: https://api.openweathermap.org/data/2.5/weather?units=metric&lat=23.132670729170986&lon=120.42738273684154&appid=c823e04ed82330562082cd0d239a5295&lang=zh_TW
+    name: weaterAPI
+    description: ""
+    method: GET
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - name: lat
+          value: "23.132670729170986"
+          id: pair_42447b6b544040e38d700ba96022fe25
+        - id: pair_584cc1afb77a496e9742ca33cc1507db
+          name: lon
+          value: "120.42738273684154"
+          description: ""
+        - id: pair_fbc0e2dfc80d4076827436a486c41835
+          name: appid
+          value: c823e04ed82330562082cd0d239a5295
+          description: ""
+        - id: pair_295b90f46acc4cffb4d6c8f2961d6c52
+          name: lang
+          value: zh_TW
+          description: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/x-www-form-urlencoded
+        id: pair_ddafaafd3d1f47598d794fde40315cea
+      - name: User-Agent
+        value: insomnia/8.6.1
+        id: pair_80d49f990ea84dfc8cf38567a57451e1
+      - id: pair_7a0f6a4943734239bb82468c4f8af3a6
+        name: ""
+        value: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        description: ""
+    authentication: {}
+    preRequestScript: ""
+    metaSortKey: -1706168476063.1875
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_224d49abcb814bc1ab46b9877ca7ab09
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1714137761388
+    created: 1712075829473
+    url: https://scout12.crazyjerry.workers.dev
+    name: cloudflare
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"token":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        	"key":"admin",
+        	"data":{
+        	"username": "10006",
+        	"session": "071101"
+        	},
+        	"action":"sync-list"
+        	
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_55e3c007c01a4b5daefec38de9ac2606
+      - name: User-Agent
+        value: insomnia/8.6.1
+        id: pair_2c95dd7cd0c949dfb16ecacf40ec609b
+      - id: pair_fc4e18ae611b401098ccd78490805d3c
+        name: ""
+        value: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        description: ""
+    authentication: {}
+    preRequestScript: ""
+    metaSortKey: -1705820636495.75
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_7991fced716c30ebfc4809d7c0435b5bc6ec64fa
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1720164230497
+    created: 1709994701878
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: {}
+    color: null
+    isPrivate: false
+    metaSortKey: 1709994701878
+    _type: environment
+  - _id: jar_7991fced716c30ebfc4809d7c0435b5bc6ec64fa
+    parentId: wrk_c9ffa8e66bcd44f5bdfe0ba71fb53e9b
+    modified: 1720164230481
+    created: 1709994701882
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar

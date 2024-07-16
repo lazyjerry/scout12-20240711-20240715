@@ -1,0 +1,676 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Documentation - HUD ADMIN</title>
+    <!-- Bootstrap styles -->
+    <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/bootstrap/css/docs.css" rel="stylesheet">
+    <link href="assets/bootstrap/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+	<div class="navbar navbar-inverse navbar-page">
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="brand" href="#"><img src="assets/images/logo.png" style="max-height: 16px; margin-top: 3px; display: block;"></a>
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="active">
+							<a href="index.html">Vue 3 Version</a>
+						</li>
+					</ul>
+					<ul class="nav pull-right">
+						<li>
+							<a href="change_log.html">Change Log</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<header class="jumbotron subhead" id="overview">
+		<div class="container">
+			<h1 class="text-center"><img src="assets/images/logo.png" style="max-height: 60px" /> <span class="version">v2.3</span></h1>
+			<p class="lead text-center">Bootstrap 5 responsive admin template</p>
+			<p class="documented">documented by Sean Ngu</p>
+		</div>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<div class="well">
+					<p>
+						<strong>
+							Updated on: 06/Nov/2023<br>
+							By: Sean Ngu<br>
+							Email: <a href="mailto:nguoksiong@live.co.uk">nguoksiong@live.co.uk</a>
+						</strong>
+					</p>
+					<p>
+						Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file,
+						please feel free to email your question to my email <a href="mailTo:nguoksiong@live.co.uk">nguoksiong@live.co.uk</a>. Thanks so much!
+					</p>
+				</div>
+			</div><!-- end span12 -->
+		</div><!-- end row -->
+		<div class="row">
+			<div class="span3 bs-docs-sidebar">
+				<ul class="nav nav-list bs-docs-sidenav affix-top">
+					<li><a href="#installation"><i class="icon-chevron-right"></i>Installation</a></li>
+					<li><a href="#file-structure"><i class="icon-chevron-right"></i>File Structure</a></li>
+					<li><a href="#layout-structure"><i class="icon-chevron-right"></i>Layout Structure</a></li>
+					<li><a href="#components"><i class="icon-chevron-right"></i>Components</a></li>
+					<li><a href="#event-bus-mitt"><i class="icon-chevron-right"></i>Event Bus (Mitt)</a></li>
+					<li><a href="#pinia-store"><i class="icon-chevron-right"></i>Pinia Store</a></li>
+					<li><a href="#pinia-app-option"><i class="icon-chevron-right"></i>Pinia Store - App Option</a></li>
+					<li><a href="#pinia-app-variable"><i class="icon-chevron-right"></i>Pinia Store - App Variable</a></li>
+					<li><a href="#pinia-app-sidebar-menu"><i class="icon-chevron-right"></i>Pinia Store - App Sidebar Menu</a></li>
+					<li><a href="#theme-color"><i class="icon-chevron-right"></i>Theme Color</a></li>
+					<li><a href="#themeCover"><i class="icon-chevron-right"></i>Theme Cover</a></li>
+					<li><a href="#lightMode"><i class="icon-chevron-right"></i>Light Mode <span class="label label-important">NEW</span></a></li>
+					<li><a href="#rtlMode"><i class="icon-chevron-right"></i>RTL Mode</a></li>
+					<li><a href="#scssConfiguration"><i class="icon-chevron-right"></i>SCSS Configuration</a></li>
+					<li><a href="#bootstrap-components"><i class="icon-chevron-right"></i>Bootstrap Components</a></li>
+					<li><a href="#bootstrap-javascript"><i class="icon-chevron-right"></i>Bootstrap Javascript</a></li>
+					<li><a href="#references"><i class="icon-chevron-right"></i>References</a></li>
+				</ul>
+			</div>
+			<div class="span9">
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="installation"><strong>A) Installation</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Follow the following step to install the laravel in your localhost<br />
+							You may refer to their official documentation for how to setup the development environment. <br />
+							<a href="https://vuejs.org/guide/introduction.html" target="_blank">Setup Guide</a>
+						</p>
+<pre class="prettyprint linenums">
+&lt;!-- run the following command --&gt; 
+cd /your-path-url/template_vue
+npm install
+npm run dev
+
+&lt;!-- browse the url --&gt; 
+http://localhost:5173/
+</pre>
+						<p>
+							Make sure node.js >= <code>v18.x</code> and npm >= <code>v9.x</code> has been installed on your localhost / server
+						</p>
+					</div>
+				</div>
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="file-structure"><strong>B) File Structure</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>File structure overview for Vue Version</p>
+<pre class="prettyprint linenums">
+hud_vue_v2.3/
+├──template_vue_startup/      // version without demo pages
+└──template_vue/              // version include all demo pages
+    ├── .eslintrc.cjs
+    ├── .gitignore
+    ├── .vscode/
+    ├── cypress/
+    ├── cypress.json
+    ├── env.d.ts
+    ├── index.html
+    ├── package.json
+    ├── public/
+    ├── README.md
+    ├── src/
+    │   ├── App.vue
+    │   ├── assets/
+    │   ├── components/
+    │   ├── composables/
+    │   ├── main.ts
+    │   ├── router/
+    │   ├── scss/
+    │   ├── stores/
+    │   └── views/
+    ├── tsconfig.app.json
+    ├── tsconfig.json
+    ├── tsconfig-vite-config.json
+    ├── tsconfig.vitest.json
+    └── vite.config.ts
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="layout-structure"><strong>C) Layout Structure</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Below is the code from <code>App.vue</code> which include the app header, sidebar, content, footer and theme panel. You may remove the component if you are not using it.</p>
+<pre class="prettyprint linenums">
+&lt;script setup lang="ts"&gt;
+import { RouterLink, RouterView } from 'vue-router';
+import { useAppOptionStore } from '@/stores/app-option';
+import AppSidebar from '@/components/app/Sidebar.vue';
+import AppHeader from '@/components/app/Header.vue';
+import AppFooter from '@/components/app/Footer.vue';
+import AppTopNav from '@/components/app/TopNav.vue';
+import AppThemePanel from '@/components/app/ThemePanel.vue';
+
+const appOption = useAppOptionStore();
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div class="app" v-bind:class="{ 
+    'app-header-menu-search-toggled': appOption.appHeaderSearchToggled,
+    'app-sidebar-toggled': appOption.appSidebarToggled && !appOption.appSidebarCollapsed,
+    'app-sidebar-collapsed': appOption.appSidebarCollapsed,
+    'app-sidebar-mobile-toggled': appOption.appSidebarMobileToggled,
+    'app-sidebar-mobile-closed': appOption.appSidebarMobileClosed,
+    'app-content-full-height': appOption.appContentFullHeight,
+    'app-content-full-width': appOption.appSidebarHide,
+    'app-without-sidebar': appOption.appSidebarHide,
+    'app-without-header': appOption.appHeaderHide,
+    'app-boxed-layout': appOption.appBoxedLayout,
+    'app-with-top-nav': appOption.appTopNav,
+    'app-footer-fixed': appOption.appFooterFixed,
+  }"&gt;
+    &lt;vue3-progress-bar /&gt;
+    &lt;app-header v-if="!appOption.appHeaderHide" /&gt;
+    &lt;app-top-nav v-if="appOption.appTopNav" /&gt;
+    &lt;app-sidebar v-if="!appOption.appSidebarHide" /&gt;
+    &lt;div class="app-content" v-bind:class="appOption.appContentClass"&gt;
+      &lt;router-view&gt;&lt;/router-view&gt;
+    &lt;/div&gt;
+    &lt;app-footer v-if="appOption.appFooter" /&gt;
+    &lt;app-theme-panel /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="components"><strong>D) Components</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>List of components inside the components folder</p>
+<pre class="prettyprint linenums">
+/src/components/
+├── app/
+│   ├── Footer.vue
+│   ├── Header.vue
+│   ├── NavScrollTo.vue
+│   ├── Sidebar.vue
+│   ├── SidebarNav.vue
+│   ├── TopNav.vue
+│   ├── TopNavNav.vue
+│   └── ThemePanel.vue
+├── bootstrap/
+│   ├── Card.vue
+│   ├── CardBody.vue
+│   ├── CardExpandToggler.vue
+│   ├── CardFooter.vue
+│   ├── CardGroup.vue
+│   ├── CardHeader.vue
+│   └── CardImgOverlay.vue
+└── plugins/
+    ├── Apexcharts.vue
+    ├── Chartjs.vue
+    ├── Datepicker.vue
+    ├── Highlightjs.vue
+    ├── QuillEditor.vue
+    ├── TagsInput.vue
+    ├── Typeahead.vue
+    ├── VueSelect.vue
+    └── VueTable.vue
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="event-bus-mitt"><strong>E) Event Bus (Mitt)</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>This template used <a href="https://github.com/developit/mitt" target="_blank">mitt</a> as event bus to emit events between component. Emitter files can be found via <code>/composables/useEmitter.ts</code></p>
+<pre class="prettyprint linenums">
+import useEmitter from '@/composables/useEmitter';
+
+const emitter = useEmitter();
+
+// emit event
+emitter.emit('my-event', true);
+
+// event listener
+this.emitter.on('my-event', (evt) => {
+  // do something
+});
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="pinia-store"><strong>F) Pinia Store</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>This template used <a href="https://pinia.vuejs.org/" target="_blank">pinia</a> to create the store and share the states variable between the components. Store files can be found via <code>/src/stores/</code></p>
+<pre class="prettyprint linenums">
+/src/stores/
+├─ app-option.ts            // global app option states
+├─ app-sidebar-menu.ts      // global app sidebar menu list
+├─ app-top-nav-menu.ts      // global app top nav menu list
+└─ app-variable.ts          // global app variable (fetched from css / font variables)
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="pinia-app-option"><strong>G) Pinia Store - App Option</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>You can use the global app option from <code>/stores/app-option.ts</code></p>
+<pre class="prettyprint linenums">
+import { useAppOptionStore } from '@/stores/app-option';
+
+const appOption = useAppOptionStore();
+
+export default {
+  mounted() {
+    // available app option
+    appOption.appMode = 'dark';
+    appOption.appThemeClass= '';
+    appOption.appCoverClass= '';
+    appOption.appBoxedLayout= true;
+    appOption.appHeaderHide= true;
+    appOption.appHeaderSearchToggled= true;
+    appOption.appSidebarCollapsed= true;
+    appOption.appSidebarMobileToggled= true;
+    appOption.appSidebarMobileClosed= true;
+    appOption.appSidebarHide= true;
+    appOption.appContentFullHeight= true;
+    appOption.appContentClass= '';
+    appOption.appTopNav = true,
+    appOption.appFooter= true;
+    appOption.appFooterFixed= true;
+    appOption.appThemePanelToggled= true;
+  },
+  beforeUnmount() {
+    // set to default before leave the page
+    appOption.appBoxedLayout = false;
+  }
+}
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="pinia-app-variable"><strong>H) Pinia Store - App Variable</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>You can use the global app variables (css color / font family) from <code>/stores/app-variable.ts</code></p>
+<pre class="prettyprint linenums">
+import { useAppVariableStore } from '@/stores/app-variable';
+
+const appVariable = useAppVariableStore();
+
+export default {
+  data() {
+    return {
+      variableName: appVariable.color.theme
+      
+      // font variable
+      appVariable.font.family;
+      appVariable.font.size;
+      appVariable.font.weight;
+      
+      // color variable
+      appVariable.color.theme;
+      appVariable.color.blue;
+      appVariable.color.green;
+      appVariable.color.orange
+      appVariable.color.red;
+      appVariable.color.cyan;
+      appVariable.color.purple;
+      appVariable.color.yellow;
+      appVariable.color.indigo;
+      appVariable.color.pink;
+      appVariable.color.black;
+      appVariable.color.white;
+      appVariable.color.gray;
+      appVariable.color.dark;
+      appVariable.color.gray100;
+      appVariable.color.gray200;
+      appVariable.color.gray300;
+      appVariable.color.gray400;
+      appVariable.color.gray500;
+      appVariable.color.gray600;
+      appVariable.color.gray700;
+      appVariable.color.gray800;
+      appVariable.color.gray900;
+      
+      // color variable (rgba)
+      appVariable.color.themeRgb;
+      appVariable.color.blueRgb;
+      appVariable.color.greenRgb;
+      appVariable.color.orange
+      appVariable.color.redRgb;
+      appVariable.color.cyanRgb;
+      appVariable.color.purpleRgb;
+      appVariable.color.yellowRgb;
+      appVariable.color.indigoRgb;
+      appVariable.color.pinkRgb;
+      appVariable.color.blackRgb;
+      appVariable.color.whiteRgb;
+      appVariable.color.grayRgb;
+      appVariable.color.darkRgb;
+      appVariable.color.gray100Rgb;
+      appVariable.color.gray200Rgb;
+      appVariable.color.gray300Rgb;
+      appVariable.color.gray400Rgb;
+      appVariable.color.gray500Rgb;
+      appVariable.color.gray600Rgb;
+      appVariable.color.gray700Rgb;
+      appVariable.color.gray800Rgb;
+      appVariable.color.gray900Rgb;
+    }
+  }
+}
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="pinia-app-sidebar-menu"><strong>I) Pinia Store - App Sidebar Menu</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Set the app sidebar menu list from from <code>/stores/app-sidebar-menu.ts</code></p>
+<pre class="prettyprint linenums">
+// single level structure
+{
+  'url': '/',
+  'icon': 'bi bi-cpu',
+  'text': 'Dashboard'
+},
+
+// multi level structure 
+{
+  'icon': 'bi bi-envelope',
+  'text': 'Email',
+  'children': [{
+    'url': '/email/inbox',
+    'action': 'Inbox',
+    'text': 'Inbox'
+  }, {
+    'url': '/email/compose',
+    'action': 'Compose',
+    'text': 'Compose'
+  }, {
+    'url': '/email/detail',
+    'action': 'Detail',
+    'text': 'Detail'
+  }]
+}
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="theme-color"><strong>J) Theme Color</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							The default theme color is set to the <code>teal</code> color. You may change it from <code>/src/scss/_variables.scss</code>
+						</p>
+<pre class="prettyprint linenums">
+// LINE 80
+$theme:        $teal !default;
+</pre>
+						<p>
+							Besides that, you can also set the theme color by adding the value <code>theme-{ color-name }</code> to <code>/src/stores/app-option.ts</code>
+						</p>
+<pre class="prettyprint linenums">
+// LINE 7
+appThemeClass: 'theme-blue',
+</pre>
+						<div class="alert alert-info">
+							<b>***IMPORTANT***</b><br />
+
+							You might need to remove the <code>&lt;app-theme-panel /&gt;</code> component from <code>/src/App.vue</code>.<br /><br />
+							This is because app-theme-panel will store a <b>localStorage</b> variable and append the theme class automatically when page load
+							if you have select any theme color before from theme panel.
+						</div>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="themeCover"><strong>K) Theme Cover</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Add the 'cover' class to the <code>&lt;html&gt;</code> tag in <code>/template_vue/index.html</code> to change the page cover. You can modify the cover image from <code>/src/scss/images/</code>. Note that both light and dark mode have separate background cover images.
+						</p>
+						<h4>Available Cover Options</h4>
+						<pre class="prettyprint linenums">&lt;html class="bg-cover-2"&gt;
+&lt;html class="bg-cover-3"&gt;
+&lt;html class="bg-cover-4"&gt;
+&lt;html class="bg-cover-5"&gt;
+&lt;html class="bg-cover-6"&gt;
+&lt;html class="bg-cover-7"&gt;
+&lt;html class="bg-cover-8"&gt;
+&lt;html class="bg-cover-9"&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="lightMode"><strong>L) Light Mode</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Starting from <b>version 2.0</b>, we have implemented a default dark mode theme that is applied to the page in <code>/template_vue/index.html</code>. 
+							This is achieved through the use of the <code>data-bs-theme="dark"</code> attribute in the <code>&lt;html&gt;</code> tag.
+						</p>
+						<p>
+							If you wish to enable the light mode instead, you can easily do so by removing the <code>data-bs-theme="dark"</code> attribute from the HTML tag. 
+							This will disable the default dark mode and enable the light mode theme.
+						</p>
+						<p>
+							Please note that once you remove the <code>data-bs-theme="dark"</code> attribute, 
+							the light mode theme will persist even if the user refreshes the page or navigates to a different page within the application.
+						</p>
+						<h4>Here's an example:</h4>
+						<b>change from</b>
+						<pre class="prettyprint linenums">&lt;!DOCTYPE html&gt;
+&lt;html lang="en" data-bs-theme="dark"&gt;
+&lt;/html&gt;
+</pre>
+						<b>to</b>
+						<pre class="prettyprint linenums">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;/html&gt;
+</pre>
+						<p>
+							With this example, the <code>data-bs-theme="dark"</code> attribute has been removed from html tag. This will enable the light mode to the entire page.
+						</p>
+						<p>
+							<b>OR</b>
+						</p>
+						<p>
+							If you want to apply light / dark mode to a single component only, you can add the <code>data-bs-theme="light|dark"</code> attribute to that component.
+						</p>
+						<pre class="prettyprint linenums">&lt;card data-bs-theme="light"&gt;
+  &lt;card-body&gt;
+    &lt;!-- your component content here --&gt;
+  &lt;/card-body&gt;
+&lt;/card&gt;
+</pre>
+						
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="rtlMode"><strong>M) RTL Mode</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>To enable RTL mode, follow these steps:</p>
+						<ol>
+							<li style="margin-bottom: 10px;">Navigate to the <code>/src/scss/_variables.scss</code> file in your code editor.</li>
+							<li style="margin-bottom: 10px;">
+								Find the <code>$enable-rtl</code> variable and change its value to true:
+								<pre class="prettyprint linenums" style="margin: 10px 0;">$enable-rtl: true;
+</pre>
+								This will enable RTL mode for your application.
+							</li>
+						</ol>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="scssConfiguration"><strong>N) SCSS Configuration</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p><b>Global Variables</b></p>
+						<p>
+							The <code>/src/scss/_variables.scss</code> file contains the variables that control the styles of your application.
+						</p>
+						<p>
+							To edit these variables, navigate to the <code>/src/scss/_variables.scss</code> file in your code editor and modify the values of the variables to suit your needs.
+						</p>
+						<pre class="prettyprint linenums">&lt;!-- global variable --&gt;
+/src/scss/_variables.scss
+</pre>
+						<p><b>Dark Mode Variables</b></p>
+						<p>
+							The <code>/src/scss/_variables-dark.scss</code> file contains the variables that control the styles for dark mode. 
+							These variables are used in conjunction with the variables in the <code>/src/scss/_variables.scss</code> file to provide different values for light and dark modes.
+						</p>
+						<pre class="prettyprint linenums">&lt;!-- dark mode variable --&gt;
+/src/scss/_variables-dark.scss
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="bootstrap-components"><strong>O) Bootstrap Components</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>We have created the common re-usable <code>card</code> bootstrap component for this template. You may found the card component via <code>/src/components/bootstrap/</code></p>
+<pre class="prettyprint linenums">
+//usage 
+&lt;card&gt;
+  &lt;card-header&gt;...&lt;/card-header&gt;
+  &lt;card-body&gt;...&lt;/card-body&gt;
+  &lt;card-footer&gt;...&lt;/card-footer&gt;
+&lt;/card&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="bootstrap-javascript"><strong>P) Bootstrap Javascript</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>You may use the default bootstrap data attribute like <code>data-bs-toggle="dropdown"</code> OR import the required modules from bootstrap.
+<pre class="prettyprint linenums">
+// usage example
+import { ScrollSpy } from 'bootstrap';
+
+new ScrollSpy(document.body, {
+  target: '#sidebar-bootstrap',
+  offset: 200
+})
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="references"><strong>Q) References</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							I've used the following images, icons or other files as listed.
+						</p>
+						<p><b>Plugins</b></p>
+						<ol style="margin-bottom: 20px">
+							<li><b>ApexCharts</b>: <a target="_blank" href="https://apexcharts.com/">https://apexcharts.com/</a></li>
+							<li><b>Axios</b>: <a target="_blank" href="https://github.com/axios/axios">https://github.com/axios/axios</a></li>
+							<li><b>Bootstrap</b>: <a target="_blank" href="http://getbootstrap.com/">http://getbootstrap.com/</a></li>
+							<li><b>Bootstrap Icons</b>: <a target="_blank" href="https://icons.getbootstrap.com/">https://icons.getbootstrap.com/</a></li>
+							<li><b>Chart.js</b>: <a target="_blank" href="https://chartjs.org">https://chartjs.org</a></li>
+							<li><b>Datatables</b>: <a target="_blank" href="https://datatables.net/blog/2022-06-22-vue">https://datatables.net/</a></li>
+							<li><b>FontAwesome</b>: <a target="_blank" href="https://fontawesome.com/">https://fontawesome.com/</a></li>
+							<li><b>Fullcalendar</b>: <a target="_blank" href="https://fullcalendar.io/">https://fullcalendar.io/</a></li>
+							<li><b>Highlight.js</b>: <a target="_blank" href="https://highlightjs.org/">https://highlightjs.org/</a></li>
+							<li><b>Iconify</b>: <a target="_blank" href="https://icon-sets.iconify.design/">https://icon-sets.iconify.design/</a></li>
+							<li><b>jsvectormap</b>: <a target="_blank" href="https://github.com/themustafaomar/jsvectormap">https://github.com/themustafaomar/jsvectormap</a></li>
+							<li><b>lity</b>: <a target="_blank" href="https://sorgalla.com/lity/">https://sorgalla.com/lity/</a></li>
+							<li><b>maska</b>: <a target="_blank" href="https://github.com/beholdr/maska">https://github.com/beholdr/maska</a></li>
+							<li><b>masonry</b>: <a target="_blank" href="https://masonry.desandro.com/">https://masonry.desandro.com/</a></li>
+							<li><b>mitt</b>: <a target="_blank" href="https://github.com/developit/mitt">https://github.com/developit/mitt</a></li>
+							<li><b>moment</b>: <a target="_blank" href="http://momentjs.com/">http://momentjs.com/</a></li>
+							<li><b>Perfect Scrollbar</b>: <a target="_blank" href="https://github.com/mercs600/vue3-perfect-scrollbar">https://github.com/mercs600/vue3-perfect-scrollbar</a></li>
+							<li><b>Picmo</b>: <a target="_blank" href="https://picmojs.com/">https://picmojs.com/</a></li>
+							<li><b>Pinia</b>: <a target="_blank" href="https://pinia.vuejs.org/">https://pinia.vuejs.org/</a></li>
+							<li><b>PhotoSwipe</b>: <a target="_blank" href="https://photoswipe.com/">https://photoswipe.com/</a></li>
+							<li><b>Popper.js</b>: <a target="_blank" href="https://popper.js.org/">https://popper.js.org/</a></li>
+							<li><b>Vue.js</b>: <a target="_blank" href="https://vuejs.org/">https://vuejs.org/</a></li>
+							<li><b>Vue Colorpicker</b>: <a target="_blank" href="https://caohenghu.github.io/vue-colorpicker/">https://caohenghu.github.io/vue-colorpicker/</a></li>
+							<li><b>Vue Colorpicker</b>: <a target="_blank" href="https://caohenghu.github.io/vue-colorpicker/">https://caohenghu.github.io/vue-colorpicker/</a></li>
+							<li><b>Vue Countdown</b>: <a target="_blank" href="https://fengyuanchen.github.io/vue-countdown/">https://fengyuanchen.github.io/vue-countdown/</a></li>
+							<li><b>Vue Quill</b>: <a target="_blank" href="https://vueup.github.io/vue-quill/">https://vueup.github.io/vue-quill/</a></li>
+							<li><b>Vue Select</b>: <a target="_blank" href="https://vue-select.org/">https://vue-select.org/</a></li>
+							<li><b>Vue 3 Datepicker</b>: <a target="_blank" href="https://vue3datepicker.com/">https://vue3datepicker.com/</a></li>
+							<li><b>Vue 3 Google Map</b>: <a target="_blank" href="https://github.com/inocan-group/vue3-google-map">https://github.com/inocan-group/vue3-google-map</a></li>
+							<li><b>Vue 3 Progress</b>: <a target="_blank" href="https://github.com/marcoschulte/vue3-progress">https://github.com/marcoschulte/vue3-progress</a></li>
+							<li><b>Vue 3 Simple Typeahead</b>: <a target="_blank" href="https://github.com/frikinside/vue3-simple-typeahead">https://github.com/frikinside/vue3-simple-typeahead</a></li>
+							<li><b>Vue 3 Tags Input</b>: <a target="_blank" href="https://github.com/sipec/vue-tags-input">https://github.com/sipec/vue-tags-input</a></li>
+							<li><b>Vue 3 Table Lite</b>: <a target="_blank" href="https://github.com/linmasahiro/vue3-table-lite">https://github.com/linmasahiro/vue3-table-lite</a></li>
+						</ol>
+						<p><b>Photos</b></p>
+						<ol>
+							<li><b>Unsplash</b>: <a target="_blank" href="https://unsplash.com/">https://unsplash.com/</a></li>
+							<li><b>Freepik</b>: <a target="_blank" href="https://www.freepik.com/">https://www.freepik.com/</a></li>
+						</ol>
+					</div>
+				</div><!-- end row-fluid -->
+			</div><!-- end span12 -->
+		</div><!-- end row-fluid -->
+	</div><!-- end container -->
+	
+	<footer class="footer">
+		<div class="container text-left">
+			<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes, you might consider visiting the forums and asking your question via <a href="mailTo:nguoksiong@live.co.uk">email</a>.</p> 
+			<br />
+			<p class="append-bottom alt large"><strong>Sean Ngu</strong></p>
+			<p><a href="#top">Go To Table of Contents</a></p>
+		</div>
+	</footer><!-- end footer -->
+	
+	<script src="assets/bootstrap/js/jquery.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-transition.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-alert.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-modal.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-dropdown.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-scrollspy.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-tab.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-tooltip.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-popover.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-button.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-collapse.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-carousel.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-typeahead.js"></script>
+	<script src="assets/bootstrap/js/bootstrap-affix.js"></script>
+
+	<script src="assets/bootstrap/js/holder/holder.js"></script>
+	<script src="assets/bootstrap/js/google-code-prettify/prettify.js"></script>
+	<script src="assets/bootstrap/js/application.js"></script>
+</body>
+</html>
