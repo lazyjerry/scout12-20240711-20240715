@@ -3,9 +3,13 @@
 
 相關文件連結：
 [API 文件](https://github.com/lazyjerry/scout12-20240711-20240714/blob/main/%E6%96%87%E4%BB%B6/%E5%85%A8%2012%20API%20%E6%96%87%E4%BB%B6.docx)
-[工作坊頁面操作說明](https://github.com/lazyjerry/scout12-20240711-20240714/blob/main/%E6%96%87%E4%BB%B6/%E5%B7%A5%E4%BD%9C%E5%9D%8A%E7%B0%BD%E5%88%B0%E7%B0%BD%E9%80%80%E7%B3%BB%E7%B5%B1%E6%93%8D%E4%BD%9C%E8%AA%AA%E6%98%8E%EF%BC%88%E6%84%9F%E8%AC%9D%E6%B2%88%E4%BF%8A%E9%81%94%E6%B2%88%E6%A0%A1%E9%95%B7%E8%A3%BD%E4%BD%9C%E6%96%87%E4%BB%B6%EF%BC%89.pdf)
+
+[工作坊頁面操作說明，感謝沈校長製作](https://github.com/lazyjerry/scout12-20240711-20240714/blob/main/%E6%96%87%E4%BB%B6/%E5%B7%A5%E4%BD%9C%E5%9D%8A%E7%B0%BD%E5%88%B0%E7%B0%BD%E9%80%80%E7%B3%BB%E7%B5%B1%E6%93%8D%E4%BD%9C%E8%AA%AA%E6%98%8E%EF%BC%88%E6%84%9F%E8%AC%9D%E6%B2%88%E4%BF%8A%E9%81%94%E6%B2%88%E6%A0%A1%E9%95%B7%E8%A3%BD%E4%BD%9C%E6%96%87%E4%BB%B6%EF%BC%89.pdf)
+
 [活動單項計畫書](https://github.com/lazyjerry/scout12-20240711-20240714/blob/main/%E6%96%87%E4%BB%B6/%E7%B0%BD%E5%88%B0%E7%B0%BD%E5%87%BA%E5%96%AE%E9%A0%85%E8%A8%88%E7%95%AB%E6%9B%B8.docx)
+
 [工作坊截圖](https://github.com/lazyjerry/scout12-20240711-20240714/tree/main/%E6%96%87%E4%BB%B6/%E5%B7%A5%E4%BD%9C%E5%9D%8A%E6%88%AA%E5%9C%96)
+
 [後台截圖](https://github.com/lazyjerry/scout12-20240711-20240714/tree/main/%E6%96%87%E4%BB%B6/%E5%BE%8C%E5%8F%B0%E6%88%AA%E5%9C%96)
 
 # 技術規格
