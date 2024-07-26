@@ -173,7 +173,7 @@
     2. <https://vuejs.org/guide/introduction.html>
 3. PHP for Codeigniter4.x
     1. <https://codeigniter.com/user_guide/intro/index.html>
-4. Git for Gilab
+4. Git for Gitlab
     1. <https://about.gitlab.com/>
 5. Weater API
     1. <https://openweathermap.org/api>
